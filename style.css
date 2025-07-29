@@ -1,0 +1,197 @@
+
+.dark-mode {
+      background-color: black;
+      color: #ffffff;
+    }
+
+    .light-mode {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .btn-toggle-mode {
+      font-size: 1.2rem;
+      border: none;
+      background: transparent;
+      color: inherit;
+    }
+
+    .text-dark {
+  color: #000 !important;
+}
+
+    header img {
+      width: 60px;
+      height: auto;
+    }
+
+    .text {
+      color: white;
+    }
+
+    .text-shadow:hover {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.1);
+           }
+
+
+           /* Hamburger icon (three lines) */
+          .navbar-toggler-icon {
+            background-image: none; /* remove default icon */
+            width: 1.5em;
+            height: 1.5em;
+            position: relative;
+          }
+
+          .navbar-toggler-icon::before,
+          .navbar-toggler-icon::after,
+          .navbar-toggler-icon span {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: currentColor;
+            position: absolute;
+            left: 0;
+            transition: 0.3s ease;
+          }
+
+     /* Top line */
+     .navbar-toggler-icon::before {
+       top: 20%;
+     }
+
+     /* Middle line */
+     .navbar-toggler-icon span {
+       top: 50%;
+       transform: translateY(-50%);
+     }
+
+     /* Bottom line */
+     .navbar-toggler-icon::after {
+       bottom: 20%;
+     }
+
+     /* Toggle color based on mode */
+     .light-mode .navbar-toggler-icon::before,
+     .light-mode .navbar-toggler-icon::after,
+     .light-mode .navbar-toggler-icon span {
+       background-color: black;
+     }
+
+     .dark-mode .navbar-toggler-icon::before,
+     .dark-mode .navbar-toggler-icon::after,
+     .dark-mode .navbar-toggler-icon span {
+       background-color: white;
+     }
+
+
+    .btn-custom-dark {
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+      border-radius: 30px;
+      padding: 10px 20px;
+    }
+    .btn-custom-dark:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .btn-custom-light {
+      background-color: transparent;
+      color: black;
+      border: 1px solid black;
+      border-radius: 30px;
+      padding: 10px 20px;
+    }
+    .btn-custom-light:hover {
+      background-color: black;
+      color: white;
+      border: 1px solid white;
+    }
+    #modeToggle{
+      background-color: transparent;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .icons {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .icons:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .service-box {
+      /* background-color: #111; */
+      border: 1px solid #444;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .service-box:hover {
+        box-shadow: 0 0 20px 2px white;
+        opacity: 0.8;
+    }
+
+    /* Card zoom effect */
+#portfolio .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#portfolio .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Image zoom inside card */
+#portfolio .card-img-top {
+  transition: transform 0.4s ease;
+}
+
+#portfolio .card:hover .card-img-top {
+  transform: scale(1.08);
+}
+    
+    .form-control,
+    textarea {
+      background-color: #222;
+      color: white;
+      border: none;
+      outline: none;
+    }
+
+    .form-control:focus, textarea:focus {
+      background-color: #222; /* or your dark-mode color */
+      color: white;
+      outline: none;
+      box-shadow: none; /* Optional: remove blue border glow */
+    }
+
+    .form-control::placeholder,
+    textarea::placeholder {
+      color: #aaa;
+    }
+
+    input:-webkit-autofill,
+    textarea:-webkit-autofill {
+      background-color: #222 !important;
+      color: white !important;
+      -webkit-box-shadow: 0 0 0px 1000px #222 inset !important;
+      -webkit-text-fill-color: white !important;
+    }
+
+    footer {
+      border-top: 1px solid #444;
+      padding-top: 2rem;
+    }

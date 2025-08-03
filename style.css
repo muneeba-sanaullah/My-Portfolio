@@ -162,6 +162,11 @@
 #portfolio .card:hover .card-img-top {
   transform: scale(1.08);
 }
+
+.project-img {
+  height: 300px;
+  object-fit: cover;
+}
     
     .form-control,
     textarea {

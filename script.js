@@ -35,8 +35,8 @@ function toggleMode() {
 
   // Update nav-link shadows
   navLinks.forEach(link => {
-    link.classList.toggle("text-shadow", !isDark);
-    link.classList.toggle("text-shadow-black", isDark);
+    link.classList.toggle("text-shadow-black", !isDark);
+    link.classList.toggle("text-shadow-light", isDark);
   });
 
   const offcanvas = document.querySelector('.offcanvas-theme');

@@ -151,11 +151,21 @@
     }
 
     /* Card zoom effect */
+
 #portfolio .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform-origin: center;
   cursor: pointer;
   overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12); /* default subtle border */
+}
+
+.dark-mode #portfolio .card {
+  border: 1px solid rgba(255,255,255,0.12) !important; /* very light border in dark mode */
+}
+
+.light-mode #portfolio .card {
+  border: 1px solid rgba(0,0,0,0.08) !important; /* subtle border in light mode */
 }
 
 #portfolio .card:hover {

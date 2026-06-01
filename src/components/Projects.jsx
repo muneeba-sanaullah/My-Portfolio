@@ -20,8 +20,8 @@ function Projects() {
     "Fully responsive personal portfolio built with React and Tailwind CSS featuring dark/light mode, smooth UI, and project showcase.",
   image: portfolioImage, // or your own screenshot
   tags: ["React", "Tailwind CSS", "Responsive Design"],
-  liveLink: "https://your-portfolio-link.com",
-  codeLink: "https://github.com/your-username/portfolio"
+  liveLink: "https://muneeba-sanaullah.github.io/My-Portfolio/",
+  codeLink: "https://github.com/muneeba-sanaullah/My-Portfolio.git"
 },
     // {
     //   title: "AI Dashboard",

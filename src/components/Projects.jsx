@@ -11,8 +11,8 @@ function Projects() {
     "Full-stack floral e-commerce platform with responsive UI, product filtering, shopping cart, and Stripe payment integration. Currently working on backend features, database storage, and email confirmations.",
   image: bloomImage,
   tags: ["React", "Node.js", "Stripe"],
-  liveLink: "",
-  codeLink: ""
+  liveLink: "https://floral-boutique-ui.vercel.app/",
+  codeLink: "https://github.com/muneeba-sanaullah/Floral-website.git"
 },
     {
   title: "Personal Portfolio Website",

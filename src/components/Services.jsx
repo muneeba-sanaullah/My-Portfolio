@@ -1,24 +1,26 @@
-import { FaReact, FaServer, FaRobot } from "react-icons/fa";
+import { FaReact, FaServer, FaRobot, FaDatabase } from "react-icons/fa";
 
 function Services() {
   const services = [
     {
       icon: <FaReact size={28} />,
-      title: "Frontend Development",
-      description:
-        "Building responsive and interactive web applications with React, JavaScript, TypeScript, Tailwind CSS, and modern UI practices.",
+      title: "Frontend Engineering",
+      description: "Building pixel-perfect, responsive UIs with React, Tailwind, and high-performance design patterns."
     },
     {
       icon: <FaServer size={28} />,
-      title: "Full-Stack Applications",
-      description:
-        "Developing complete web solutions using React, Node.js, Express, REST APIs, databases, authentication flows, and payment integrations.",
+      title: "Backend Development",
+      description: "Designing robust RESTful APIs, Node.js server architectures, and secure authentication flows."
+    },
+    {
+      icon: <FaDatabase size={28} />,
+      title: "Database Management",
+      description: "Designing efficient schemas and implementing persistent SQLite/SQL storage solutions for scalable apps."
     },
     {
       icon: <FaRobot size={28} />,
-      title: "AI & API Integration",
-      description:
-        "Integrating AI services, third-party APIs, payment gateways, and external systems to create dynamic and intelligent user experiences.",
+      title: "System Integration",
+      description: "Integrating AI models, third-party APIs, and payment gateways into seamless, intelligent ecosystems."
     },
   ];
 

@@ -2,4 +2,8 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+#home {
+  min-height: 90vh; /* Ensures it's big enough to be tracked */
 }

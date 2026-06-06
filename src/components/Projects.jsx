@@ -7,10 +7,10 @@ function Projects() {
   const projectsData = [
 {
   title: "Bloom & Blossom (E-Commerce)",
-  description:
-    "Full-stack floral e-commerce platform with responsive UI, product filtering, shopping cart, and Stripe payment integration. Currently working on backend features, database storage, and email confirmations.",
+  description: 
+  "Full-stack floral e-commerce platform featuring a custom Node.js/Express API, SQLite persistence, and secure RESTful endpoints. Includes intelligent search filtering, real-time responsive UI, and robust backend error handling.",
   image: bloomImage,
-  tags: ["React", "Node.js", "Stripe"],
+  tags: ["React", "Node.js", "Express", "SQLite", "REST API"],
   liveLink: "https://floral-boutique-ui.vercel.app/",
   codeLink: "https://github.com/muneeba-sanaullah/Floral-website.git"
 },

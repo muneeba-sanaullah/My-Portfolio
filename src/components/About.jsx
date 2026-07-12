@@ -1,3 +1,5 @@
+import GradientText from './GradientText';
+
 function About() {
   return (
     <section id="about" className="px-6 py-24 max-w-7xl mx-auto">
@@ -5,7 +7,15 @@ function About() {
       {/* Section Title */}
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-semibold text-white">
-          About Me
+          
+          <GradientText
+            colors={["#4B0082", "#1D4ED8", "#E63940", "#22D3EE", "#A855F7"]}
+            animationSpeed={8}
+            showBorder={false}
+            className="custom-class"
+          >
+             About Me
+          </GradientText>
         </h2>
         <p className="mt-3 text-gray-400 text-sm md:text-base">
           A quick introduction to who I am and what I build
@@ -47,8 +57,16 @@ function About() {
         {/* RIGHT: Skills */}
         <div>
 
-          <h3 className="text-white text-xl font-medium mb-6">
-            Skills & Technologies
+          <h3 className="text-xl font-medium mb-6">
+            
+            <GradientText
+            colors={["#4B0082", "#1D4ED8", "#E63940", "#22D3EE", "#A855F7"]}
+            animationSpeed={8}
+            showBorder={false}
+            className="custom-class"
+          >
+             Skills & Technologies
+          </GradientText>
           </h3>
 
           <div className="space-y-6">

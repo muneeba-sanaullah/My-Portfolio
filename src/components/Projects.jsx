@@ -1,104 +1,215 @@
-import React from 'react';
-import bloomImage from '../assets/bloom&blossom.png'; 
-import portfolioImage from '../assets/my-portfolio.png';
+import { motion } from "framer-motion";
+import { FiArrowUpRight, FiGithub } from "react-icons/fi";
+import GradientText from "./GradientText";
+
+import bloomImage from "../assets/bloom&blossom.png";
+import portfolioImage from "../assets/my-portfolio.png";
 
 function Projects() {
-  // 1. Array of your project data to keep the code clean and scalable
-  const projectsData = [
-{
-  title: "Bloom & Blossom (E-Commerce)",
-  description: 
-  "Full-stack floral e-commerce platform featuring a custom Node.js/Express API, SQLite persistence, and secure RESTful endpoints. Includes intelligent search filtering, real-time responsive UI, and robust backend error handling.",
-  image: bloomImage,
-  tags: ["React", "Node.js", "Express", "SQLite", "REST API"],
-  liveLink: "https://floral-boutique-ui.vercel.app/",
-  codeLink: "https://github.com/muneeba-sanaullah/Floral-website.git"
-},
+  const projects = [
     {
-  title: "Personal Portfolio Website",
-  description:
-    "Fully responsive personal portfolio built with React and Tailwind CSS featuring dark/light mode, smooth UI, and project showcase.",
-  image: portfolioImage, // or your own screenshot
-  tags: ["React", "Tailwind CSS", "Responsive Design"],
-  liveLink: "https://muneeba-sanaullah.github.io/My-Portfolio/",
-  codeLink: "https://github.com/muneeba-sanaullah/My-Portfolio.git"
-},
-    // {
-    //   title: "AI Dashboard",
-    //   description: "Modern admin dashboard built with React, TypeScript, and charts for data visualization and analytics UI.",
-    //   image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=60", // Replace with your project image path
-    //   tags: ["React", "TypeScript", "Recharts"],
-    //   liveLink: "#",
-    //   codeLink: "#"
-    // }
+      number: "01",
+      title: "Bloom & Blossom",
+      description:
+        "A full-stack floral e-commerce platform built with React, Node.js, Express, SQLite, and REST APIs. Designed with responsive UI, intelligent product filtering, secure backend routes, and a smooth shopping experience.",
+      image: bloomImage,
+      tags: ["React", "Node.js", "Express", "SQLite", "REST API"],
+      live: "https://floral-boutique-ui.vercel.app/",
+      github:
+        "https://github.com/muneeba-sanaullah/Floral-website.git",
+    },
+
+    {
+      number: "02",
+      title: "Personal Portfolio",
+      description:
+        "A modern developer portfolio featuring animated UI, smooth interactions, responsive layouts, gradient effects, and reusable React components to create a polished user experience.",
+      image: portfolioImage,
+      tags: [
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Responsive",
+      ],
+      live: "https://muneeba-sanaullah.github.io/My-Portfolio/",
+      github:
+        "https://github.com/muneeba-sanaullah/My-Portfolio.git",
+    },
   ];
 
   return (
-    <section id="projects" className="px-6 py-20 max-w-7xl mx-auto">
-      {/* Heading */}
-      <div className="text-center mb-14">
-        <h2 className="text-3xl md:text-4xl font-semibold text-white">
-          Selected Projects
-        </h2>
-        <p className="mt-3 text-gray-400 text-sm md:text-base">
-          A mix of UI design, full-stack systems, and interactive web apps
-        </p>
-      </div>
+    <section
+      id="projects"
+      className="relative py-32 px-6 overflow-hidden"
+    >
+      {/* Background Glow */}
 
-      {/* Grid */}
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projectsData.map((project, index) => (
-          /* Project Card */
-          <div 
-            key={index} 
-            className="group border border-white/10 rounded-2xl overflow-hidden hover:border-white/30 transition cursor-pointer"
-          >
-            {/* Project Image Box */}
-            <div className="h-48 w-full overflow-hidden bg-gray-800">
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-              />
-            </div>
+      <div className="absolute top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-600/10 blur-[180px] rounded-full pointer-events-none" />
 
-            {/* Content Box */}
-            <div className="p-5">
-              <h3 className="text-white text-lg font-medium">
-                {project.title}
-              </h3>
+      <div className="max-w-7xl mx-auto relative z-10">
 
-              <p className="text-gray-400 text-sm mt-2 leading-relaxed">
-                {project.description}
-              </p>
+        {/* Heading */}
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mt-4 text-xs text-gray-400">
-                {project.tags.map((tag, tagIndex) => (
-                  <span key={tagIndex} className="border border-white/10 px-2 py-1 rounded-full">
-                    {tag}
-                  </span>
-                ))}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: .7 }}
+          viewport={{ once: true }}
+          className="text-center mb-24"
+        >
+          <h2 className="text-5xl font-bold">
+
+            <GradientText
+              colors={[
+                "#4B0082",
+                "#1D4ED8",
+                "#E63940",
+                "#22D3EE",
+                "#A855F7",
+              ]}
+              animationSpeed={8}
+              showBorder={false}
+            >
+              Selected Projects
+            </GradientText>
+
+          </h2>
+
+          <p className="text-gray-400 mt-5 max-w-2xl mx-auto text-lg leading-8">
+            A collection of full-stack applications crafted with
+            performance, scalability and thoughtful user experience
+            in mind.
+          </p>
+        </motion.div>
+
+        <div className="space-y-40">
+
+          {projects.map((project, index) => (
+
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: .8 }}
+              viewport={{ once: true }}
+              className={`grid lg:grid-cols-2 gap-16 items-center ${
+                index % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""
+              }`}
+            >
+
+              {/* IMAGE */}
+
+              <div className="relative group">
+
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 via-cyan-500/10 to-pink-500/20 blur-3xl rounded-[40px] scale-95 transition duration-500 group-hover:scale-105" />
+
+                <div className="relative rounded-[32px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl">
+
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+
+                </div>
+
               </div>
 
-              {/* Action Buttons */}
-              <div className="flex gap-3 mt-5">
-                <button 
-                  onClick={(e) => { e.stopPropagation(); window.open(project.liveLink); }}
-                  className="text-sm text-white border border-white/20 px-4 py-2 rounded-full hover:bg-white/10 transition cursor-pointer"
-                >
-                  Live
-                </button>
-                <button 
-                  onClick={(e) => { e.stopPropagation(); window.open(project.codeLink); }}
-                  className="text-sm text-gray-300 hover:text-white transition cursor-pointer"
-                >
-                  Code
-                </button>
-              </div>
-            </div>
+              {/* CONTENT */}
+
+              <div className="relative">
+
+                <h1 className="absolute -top-20 left-0 text-[120px] font-black text-white/5 select-none">
+                  {project.number}
+                </h1>
+
+                <h3 className="text-4xl font-semibold text-white relative z-10">
+                  {project.title}
+                </h3>
+
+                <div className="w-24 h-1 rounded-full mt-5 bg-gradient-to-r from-violet-500 via-cyan-400 to-pink-500" />
+
+                <p className="mt-8 text-gray-400 leading-8 text-lg">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-3 mt-8">
+
+                  {project.tags.map((tag) => (
+
+                    <span
+                      key={tag}
+                      className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300 text-sm backdrop-blur"
+                    >
+                      {tag}
+                    </span>
+
+                  ))}
+
+                </div>
+
+                <div className="flex flex-wrap gap-5 mt-10">
+
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-medium transition hover:scale-105"
+                  >
+                    Live Demo
+
+                    <FiArrowUpRight className="transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </a>
+
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition"
+                  >
+                    <FiGithub />
+
+                    GitHub
+                  </a>
+                </div>
+                              </div>
+
+            </motion.div>
+
+          ))}
+
+        </div>
+
+        {/* Bottom CTA */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-40 text-center"
+        >
+          <div className="inline-flex flex-col items-center">
+
+            <p className="text-gray-400 text-lg max-w-xl leading-8">
+              I'm always exploring new technologies and building projects
+              that combine clean design with practical functionality.
+            </p>
+
+            <a
+              href="https://github.com/muneeba-sanaullah"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 px-8 py-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+            >
+              <FiGithub className="text-lg" />
+              View More on GitHub
+              <FiArrowUpRight />
+            </a>
+
           </div>
-        ))}
+        </motion.div>
+
       </div>
     </section>
   );

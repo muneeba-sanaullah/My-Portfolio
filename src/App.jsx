@@ -20,7 +20,11 @@ const SectionWrapper = ({ children }) => (
 
 function App() {
   return (
-    <main className="bg-[#0f0f0f] text-white min-h-screen">
+    <main className="bg-[#0f0707] text-white min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
+    style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1671159593357-ee577a598f71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0N3x8fGVufDB8fHx8fA%3D%3D')",
+  }}>
       <Navbar />
       
       {/* Hero usually doesn't need a scroll animation as it's the first thing seen */}

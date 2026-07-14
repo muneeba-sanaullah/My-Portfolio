@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import DecryptedText from "./DecryptedText";
 import GradientText from "./GradientText";
+import profilePic from "../assets/profile.jpeg";
 
 function Hero() {
   return (
@@ -164,7 +165,7 @@ Hello There —
   <div className="absolute inset-0 rounded-full border border-white/10 scale-105" />
 
   <img
-    src="https://images.unsplash.com/photo-1708034677699-6f39d9c59f6e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWVzdGhldGljJTIwYW5pbWUlMjBnaXJsJTIwZmljdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
+    src={profilePic}
     alt="Muneeba Sanaullah"
     className="relative w-72 h-72 md:w-[420px] md:h-[420px] rounded-full object-cover border border-white/10 shadow-2xl"
   />

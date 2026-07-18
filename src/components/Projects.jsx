@@ -4,6 +4,7 @@ import GradientText from "./GradientText";
 
 import bloomImage from "../assets/bloom&blossom.png";
 import portfolioImage from "../assets/my-portfolio.png";
+import financeImage from "../assets/fintrack.png";
 
 function Projects() {
   const projects = [
@@ -35,6 +36,24 @@ function Projects() {
       github:
         "https://github.com/muneeba-sanaullah/My-Portfolio.git",
     },
+    {
+  number: "03",
+  title: "FinTrack",
+  status: "Currently Building",
+  description:
+    "A modern full-stack personal finance platform for managing income, expenses, budgets, and savings through an interactive analytics dashboard. Built with a responsive fintech-inspired interface, reusable React components, and scalable architecture. Authentication, backend integration, and advanced financial tools are currently in development.",
+  image: financeImage,
+  tags: [
+"React",
+"Bootstrap 5",
+"Chart.js",
+"Node.js",
+"Express.js",
+"MongoDB",
+],
+  live: "YOUR_VERCEL_LINK",
+  github: "https://github.com/muneeba-sanaullah/fintrack.git",
+},
   ];
 
   return (
@@ -119,19 +138,79 @@ function Projects() {
 
               <div className="relative">
 
-                <h1 className="absolute -top-20 left-0 text-[120px] font-black text-white/5 select-none">
+
+                {project.status && (
+
+  <div className="inline-flex items-center gap-2 px-4 py-2 mb-5 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-300 text-xs font-medium backdrop-blur-xl">
+
+    <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
+
+    {project.status}
+
+  </div>
+
+)}
+
+<h1 className="absolute -top-20 left-0 text-[120px] font-black text-white/5 select-none">
                   {project.number}
                 </h1>
 
-                <h3 className="text-4xl font-semibold text-white relative z-10">
-                  {project.title}
-                </h3>
+<h3 className="text-4xl font-semibold text-white relative z-10">
+  {project.title}
+</h3>
 
                 <div className="w-24 h-1 rounded-full mt-5 bg-gradient-to-r from-violet-500 via-cyan-400 to-pink-500" />
 
                 <p className="mt-8 text-gray-400 leading-8 text-lg">
                   {project.description}
                 </p>
+                {project.status && (
+
+  <div className="mt-8">
+
+    <h4 className="text-white font-semibold mb-4">
+      Current Progress
+    </h4>
+
+    <div className="grid grid-cols-2 gap-3 text-sm">
+
+      <div className="text-emerald-400">
+        ✓ Responsive Dashboard
+      </div>
+
+      <div className="text-emerald-400">
+        ✓ Premium FinTech UI
+      </div>
+
+      <div className="text-emerald-400">
+        ✓ Interactive Charts
+      </div>
+
+      <div className="text-emerald-400">
+        ✓ Recent Transactions
+      </div>
+
+      <div className="text-slate-400">
+        • Authentication
+      </div>
+
+      <div className="text-slate-400">
+        • CRUD Transactions
+      </div>
+
+      <div className="text-slate-400">
+        • Budget Planner
+      </div>
+
+      <div className="text-slate-400">
+        • Savings Goals
+      </div>
+
+    </div>
+
+  </div>
+
+)}
 
                 <div className="flex flex-wrap gap-3 mt-8">
 
